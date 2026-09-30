@@ -21,7 +21,7 @@ landing-page/
 
 ## Демонстрация
 
-Опубликовано на GitHub Pages: **ССЫЛКА_НА_САЙТ**
+Опубликовано на GitHub Pages: https://popupuki.github.io/landing-page/
 
 ## Автор
 
