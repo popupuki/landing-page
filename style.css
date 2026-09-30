@@ -1,0 +1,311 @@
+:root {
+  --ink: #1F2B24;
+  --ink-light: #2A3830;
+  --line: #46584C;
+  --chalk: #F1EFE7;
+  --chalk-dim: #C9D3C7;
+  --yellow: #E8C468;
+  --pink: #E38C9C;
+  --radius: 10px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--ink);
+  color: var(--chalk);
+  font-family: "Work Sans", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: "Caveat", cursive;
+  font-weight: 700;
+  line-height: 1.15;
+  margin: 0 0 .5em;
+}
+
+h1 { font-size: clamp(2.6rem, 5vw, 4.2rem); }
+h2 { font-size: clamp(2rem, 3.6vw, 2.8rem); text-align: center; }
+h3 { font-size: 1.7rem; margin-bottom: .3em; }
+
+p { margin: 0 0 1em; color: var(--chalk-dim); max-width: 60ch; }
+
+a { color: inherit; }
+
+.wrap {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Header */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(31, 43, 36, .92);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--line);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 68px;
+}
+
+.logo {
+  font-family: "Caveat", cursive;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.nav {
+  display: flex;
+  gap: 28px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--chalk-dim);
+  font-size: .95rem;
+}
+
+.nav a:hover { color: var(--chalk); }
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 13px 26px;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: 600;
+  font-family: "Work Sans", sans-serif;
+  border: 1px solid transparent;
+}
+
+.btn-primary {
+  background: var(--yellow);
+  color: #22301F;
+}
+
+.btn-primary:hover { background: #f0cf7a; }
+
+.btn-ghost {
+  border-color: var(--line);
+  color: var(--chalk);
+}
+
+.btn-ghost:hover { border-color: var(--chalk-dim); }
+
+.btn-small {
+  padding: 9px 18px;
+  font-size: .9rem;
+  background: transparent;
+  border: 1px solid var(--line);
+}
+
+/* Hero */
+.hero { padding: 88px 0 60px; }
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.chalk-underline {
+  display: block;
+  width: min(320px, 70%);
+  margin-top: 6px;
+}
+
+.chalk-underline svg {
+  width: 100%;
+  height: 20px;
+}
+
+.chalk-underline path {
+  fill: none;
+  stroke: var(--pink);
+  stroke-width: 5;
+  stroke-linecap: round;
+}
+
+.hero-sub { font-size: 1.1rem; max-width: 46ch; }
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  margin-top: 28px;
+  flex-wrap: wrap;
+}
+
+.hero-art {
+  position: relative;
+  min-height: 320px;
+}
+
+.note-card {
+  position: absolute;
+  background: var(--ink-light);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  width: 210px;
+  box-shadow: 0 14px 28px rgba(0,0,0,.28);
+}
+
+.note-1 { top: 0; left: 8%; transform: rotate(-4deg); }
+.note-2 { top: 120px; right: 0; transform: rotate(3deg); background: #33463A; }
+.note-3 { top: 250px; left: 22%; transform: rotate(-2deg); }
+
+.note-title {
+  font-family: "Caveat", cursive;
+  font-size: 1.3rem;
+  color: var(--chalk);
+  margin: 0 0 10px;
+}
+
+.note-line {
+  height: 8px;
+  border-radius: 4px;
+  background: var(--line);
+  margin-bottom: 8px;
+}
+
+.note-line.short { width: 60%; }
+
+.note-badge {
+  display: inline-block;
+  font-size: .78rem;
+  color: #22301F;
+  background: var(--pink);
+  padding: 3px 10px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+}
+
+/* Features */
+.features { padding: 70px 0; border-top: 1px solid var(--line); }
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.feature-card {
+  background: var(--ink-light);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+}
+
+.tilt-l { transform: rotate(-1.2deg); }
+.tilt-r { transform: rotate(1.2deg); }
+
+.feature-card p { max-width: none; }
+
+/* How it works */
+.how { padding: 70px 0; border-top: 1px solid var(--line); }
+
+.steps {
+  list-style: none;
+  margin: 44px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 32px;
+}
+
+.steps li {
+  display: flex;
+  gap: 22px;
+  align-items: flex-start;
+}
+
+.step-num {
+  flex: 0 0 auto;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid var(--yellow);
+  color: var(--yellow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Caveat", cursive;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+/* Reviews */
+.reviews {
+  padding: 70px 0;
+  border-top: 1px solid var(--line);
+  text-align: center;
+}
+
+blockquote {
+  margin: 0 auto;
+  max-width: 640px;
+}
+
+blockquote p {
+  font-family: "Caveat", cursive;
+  font-size: 1.6rem;
+  color: var(--chalk);
+  max-width: none;
+}
+
+blockquote footer {
+  color: var(--chalk-dim);
+  font-size: .92rem;
+}
+
+/* CTA */
+.cta {
+  padding: 80px 0;
+  text-align: center;
+  border-top: 1px solid var(--line);
+}
+
+.cta p { margin: 0 auto 28px; }
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid var(--line);
+  padding: 24px 0;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  font-size: .85rem;
+  color: var(--chalk-dim);
+}
+
+/* Responsive */
+@media (max-width: 760px) {
+  .nav { display: none; }
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero-art { min-height: 260px; margin-top: 20px; }
+  .note-card { width: 170px; padding: 14px 16px; }
+  .note-2 { right: 4%; }
+  .feature-grid { grid-template-columns: 1fr; }
+  .tilt-l, .tilt-r { transform: none; }
+  .footer-inner { flex-direction: column; gap: 6px; text-align: center; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
